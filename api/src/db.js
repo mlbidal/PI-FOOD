@@ -1,4 +1,4 @@
-require('dotenv').config();
+require('dotenv').config(); //forma de configurar las variables de entorno q utilizo en la app
 const { Sequelize } = require('sequelize');
 const fs = require('fs');
 const path = require('path');
@@ -30,10 +30,15 @@ sequelize.models = Object.fromEntries(capsEntries);
 
 // En sequelize.models están todos los modelos importados como propiedades
 // Para relacionarlos hacemos un destructuring
-const { Recipe } = sequelize.models;
+// 1. importo el models Diet
+const { Recipe, Diet } = sequelize.models;
 
 // Aca vendrian las relaciones
+// 2. hacer una relacion entre los models de 'muchos a muchos'
 // Product.hasMany(Reviews);
+// una receta de mi tabla Recipe pertenece a muchas dietas de mi tabla Diet y eso se va a ver en mi tabla intermedia
+Recipe.belongsToMany(Diet, {through : "recipes_diet"}); //'recipes_diet' va a ser mi tabla intermedia
+Diet.belongsToMany(Recipe, {through : "recipes_diet"});
 
 module.exports = {
   ...sequelize.models, // para poder importar los modelos así: const { Product, User } = require('./db.js');
