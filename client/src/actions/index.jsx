@@ -2,22 +2,23 @@ import axios from "axios";
 
 export const GET_RECIPES = 'GET_RECIPES';
 export const FILTER_BY_DIET = "FILTER_BY_DIET";
-export const GET_TYPES_OF_DIET = "GET_TYPES_OF_DIET"; //
+export const GET_TYPES_OF_DIET = "GET_TYPES_OF_DIET"; 
 export const ORDER_BY_NAME = "ORDER_BY_NAME";
 export const ORDER_BY_SCORE_LIKES = "ORDER_BY_SCORE_LIKES";
-export const GET_NAME_RECIPE = "GET_NAME_RECIPE"; //
-export const GET_DIETS = "GET_DIETS"; //este
+export const GET_NAME_RECIPE = "GET_NAME_RECIPE"; 
+export const GET_DIETS = "GET_DIETS"; 
 export const POST_RECIPE = "POST_RECIPE";
 export const GET_DETAIL = "GET_DETAIL";
 
 
-// HAGO LAS ACCIONES, LA LOGICA INTENTO HACERLA EN EL INDEX DEL REDUCER
 
-export function getRecipes() { //funcion asincrona donde conecto ell front con el back
+
+
+
+export function getRecipes() { 
     return async function (dispatch) {
         var json = await axios.get("http://localhost:3003/recipes");
-          //axios.get lo puedo reemplazar por un fetch. con axios me devuelve la respuesta en un data, y con fetch en .then(promesas)
-         //conecto la ruta del back con el front
+         
         return dispatch({
             type: GET_RECIPES,
             payload: json.data,
@@ -39,7 +40,7 @@ export function getTypesOfDiet() {
     };
 }
 
-//Una funcion, que le paso un payload que seriaa el value
+
 export function filterByDiet(payload) {
     return {
         type: "FILTER_BY_DIET",

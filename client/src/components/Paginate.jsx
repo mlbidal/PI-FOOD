@@ -1,5 +1,6 @@
 //HAGO LA LOGICA DEL PAGINADO: este componente va a ser el que renderiza los numeros en si
 import React from "react";
+import "../styles/Paginate.css";
 
 export default function Paginate({ recipesPerPage, allRecipes, paginate }) {
     //comienzo con un arreglo vacio de pagenumber, no tengo paginas todavia.
@@ -15,10 +16,10 @@ export default function Paginate({ recipesPerPage, allRecipes, paginate }) {
 
     //si el arreglo pageNumber no esta vacio, mapealo y devolve cada uno de los numeros que te devuelva el paginado
     return (
-        <nav className="btnPag">
+        <nav className="btn1">
                 {pageNumbers &&
                 pageNumbers.map((number) => (
-                    <button key={number} onClick={() => paginate(number)}>
+                    <button className="btnPag"key={number} onClick={() => paginate(number)}>
                         {number}
                     </button>
             ))}

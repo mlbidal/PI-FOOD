@@ -1,0 +1,77 @@
+.cardComp {
+background-color: rgba(255, 255, 255, 0.313);
+border-radius: 10px;
+box-shadow: 0 2px 20px rgb(139, 139, 139);
+width: 275px;
+height: 430px;
+border: transparent;
+font-size: 15px;
+padding-top:10px ;
+
+}
+
+.cardComp h3 {
+        display: flex;
+        text-align: center;
+        margin-top: 10px;
+        color:rgba(102, 99, 99, 0.896);
+        font-family: 'Helvetica';
+        font-weight:inherit;
+        justify-content: center;        
+}
+.imgContainer {
+        
+        height: 50%;
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 13px;
+        border-radius: 10px;      
+}
+
+.imgContainer img {
+        height: 100%;
+        width: 100%; 
+        background-position: center;
+        background-size: cover;
+        border-radius: 10px;
+}
+
+
+
+.cardComp img:hover {
+        -webkit-transform:scale(1.1);
+        transform:scale(1.1);
+}
+
+.typeOfD {
+        color: rgb(69, 70, 63);
+        text-decoration: underline;
+        margin-bottom: 2px;
+        margin-top: 10px;
+        margin-left: 10px;
+        line-height: 13px;
+        font-family: 'Arial';
+        font-weight:inherit;
+}
+
+.diets {
+        color: rgb(69, 70, 63);
+        margin-top: 0;
+        margin-left: 30%;
+        margin-bottom: 0;
+        line-height: 3px;
+        font-family: 'Arial';
+        font-style: italic;
+        font-weight: lighter;
+        font-size: 11px;
+}
+
+.score {
+        color: rgb(69, 70, 63);
+        float: right;
+        font-family: 'Arial';
+        font-style: italic;
+        font-weight: lighter;
+}

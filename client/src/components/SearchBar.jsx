@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { getNameRecipe } from "../actions";
 /* import MaterialIcon from "react-google-material-icons"; */
 /* import { FcSearch } from "react-icons/fc"; */
+import "../styles/SearchBar.css";
 
 export default function SearchBar() {
   const dispatch = useDispatch();
@@ -29,7 +30,7 @@ export default function SearchBar() {
         placeholder="Recipes..."
         onChange={(e) => handleInputChange(e)}
       />
-      <button type="submit" onClick={(e) => handleSubmit(e)} className="btn">
+      <button type="submit" onClick={(e) => handleSubmit(e)} className="myButton">
         <span>search</span>
       </button>
     </span>

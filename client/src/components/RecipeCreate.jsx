@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { postRecipe, getDiets } from "../actions";
 import { useDispatch, useSelector } from "react-redux";
-
+import "../styles/RecipeCreate.css";
+import { findDOMNode } from "react-dom";
 
 function validate(input) {
   let errors = {};
@@ -27,8 +28,8 @@ export default function RecipeCreate() {
   const dispatch = useDispatch();
   const history = useHistory();
   const diets = useSelector((state) => state.diets);
-  const [errors, setErrors] = useState({});
-
+  const [errors, setErrors] = useState({})
+  
   useEffect(() => {
     dispatch(getDiets());
   }, [dispatch]);
@@ -43,6 +44,10 @@ export default function RecipeCreate() {
     diets: [],
   });
 
+  const dietas = diets.filter((e) => input.diets.includes(e.id))
+  console.log(dietas)
+  console.log(diets)
+  console.log(input.diets)
   function handleChange(e) {
     setInput((input) => ({
       ...input,
@@ -59,7 +64,7 @@ export default function RecipeCreate() {
   function handleSelectDiet(e) {
     setInput((input) => ({
       ...input,
-      diets: [...input.diets, e.target.value],
+      diets: [...input.diets, Number(e.target.value)],
     }));
     setErrors(
       validate({
@@ -97,20 +102,24 @@ export default function RecipeCreate() {
       diets: input.diets.filter((diet) => diet !== d),
     });
   }
+  
 
+
+
+  
   return (
     <div className="create">
-      <Link to="/home">
-        <button className="buttonToHome">Back to Home</button>
-      </Link>
+     
       <h1>Create your own Recipe here:</h1>
-      <div className="form">
-        <form onSubmit={(e) => handleSubmit(e)}>
-          <div>
+      
+        <form className='containerForm' onSubmit={(e) => handleSubmit(e)}>
+        
+          <div className='filaForm'>
             <label>Plate Name:</label>
             <input
               className="inputCreate"
               placeholder="Complete here..."
+              class="form-control"
               type="text"
               value={input.title}
               name="title"
@@ -118,11 +127,12 @@ export default function RecipeCreate() {
             />
             {errors.title && <p>{errors.title}</p>}
           </div>
-          <div>
+          <div className='filaForm'>
             <label>Summary:</label>
             <input
               className="inputCreate"
               placeholder="Complete here..."
+              class="form-control"
               type="text"
               value={input.summary}
               name="summary"
@@ -130,27 +140,35 @@ export default function RecipeCreate() {
             />
             {errors.summary && <p>{errors.summary}</p>}
           </div>
-          <div>
+          <div className='filaForm'>
             <label>Score:</label>
             <input
               className="inputCreate"
-              type="text"
+              type="range"
+              step='1'
+              min='0'
+              max='100'
               value={input.aggregateLikes}
               name="aggregateLikes"
               onChange={(e) => handleChange(e)}
             />
+            <span>{input.aggregateLikes}</span>
           </div>
-          <div>
+          <div className='filaForm'>
             <label>Health Level:</label>
             <input
               className="inputCreate"
-              type="text"
+              type="range"
+              step='1'
+              min='0'
+              max='100'
               value={input.healthScore}
               name="healthScore"
               onChange={(e) => handleChange(e)}
             />
+            <span>{input.healthScore}</span>
           </div>
-          <div>
+          <div className='filaForm'>
             <label className="labelInstr">Instructions:</label>
             <textarea
               type="text"
@@ -162,7 +180,7 @@ export default function RecipeCreate() {
               onChange={(e) => handleChange(e)}
             />
           </div>
-          <div>
+          <div className='filaForm'>
             <label>Image:</label>
             <input
               className="inputCreate"
@@ -178,24 +196,29 @@ export default function RecipeCreate() {
             <span>Type of Diet:</span>
             <select onChange={(e) => handleSelectDiet(e)}>
               {diets.map((d) => (
-                <option value={d.name} key={d.name}>
+                <option value={d.id} key={d.name}>
                   {d.name}
                 </option>
               ))}
             </select>
-            {input.diets.map((d, i) => (
-              <ul className="d" key={i}>
-                <li >{d}</li>
-                <button className="delete" onClick={(e) => handleDelete(e, d)}>x</button>
+              <ul className="d">
+                {dietas.map(dieta =>
+                <>
+                <li>{dieta.name}</li>
+                <button className="delete" onClick={(e) => handleDelete(e, dieta.id)}>x</button>
+                </>
+                )}  
               </ul>
-            ))}
             {errors.diets && <p>{errors.diets}</p>}
           </div>
           <button type="submit" className="btnCreate">
             Create Recipe
-          </button>
+          </button> 
         </form>
+        <Link to="/home">
+        <button className="buttonToHome">Back to Home</button>
+        </Link>
       </div>
-    </div>
+    
   );
 }

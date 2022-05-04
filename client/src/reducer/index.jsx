@@ -7,9 +7,9 @@ import {
     GET_NAME_RECIPE,
     GET_DIETS,
     POST_RECIPE,
-    GET_DETAIL,} from '../actions/index';
+    GET_DETAIL,
+} from '../actions/index';
 
-//hago un estado inicial, es un objeto y pongo los estados que voy a necesitar: recetas,
 const initialState = {
     recipes: [],
     allRecipes: [],
@@ -17,19 +17,13 @@ const initialState = {
     detail: [],
 };
 
-//PAYLOAD: es lo que le mando desde el componente axios, se puede llamar status tmb
-
-//La ligica del reducer se realiza afuera de cada returno, sino se rompe.
 function rootReducer (state= initialState, action){
     switch(action.type) {
         case GET_RECIPES:
             return {
-                //guardo el estado
                 ...state, 
-                //en mi estado recipes que en un principio es un arreglo vacio, 
-                //agrega todo lo q te traiga la accion de recipes
                 recipes: action.payload, 
-                //me guardo la copia del estado para no perderlo
+
                 allRecipes: action.payload,
             };
 
@@ -40,9 +34,6 @@ function rootReducer (state= initialState, action){
                 };
 
             case FILTER_BY_DIET:
-                //Hago una variable que me guardo todos los estados de las recipes
-                //Lo que me llega por payload.actions es el value de la etiqueta select, va a ser
-                // el e.target.value en home y va a llegar a la accion por payload.
                 let allRecipes = state.allRecipes;
                 const recipesApi = allRecipes.filter((r) => !r.createdDb);
                 const filteredRecipesApi = recipesApi.filter((r) =>
@@ -101,6 +92,7 @@ function rootReducer (state= initialState, action){
                         };
 
                     case GET_NAME_RECIPE:
+                        console.log('soy get name', action.payload)
                         return {
                             ...state,
                             recipes: action.payload,
@@ -115,6 +107,7 @@ function rootReducer (state= initialState, action){
                     case POST_RECIPE:
                         return {
                             ...state,
+                            diets: action.payload,
                             };
 
                     case GET_DETAIL:
@@ -122,6 +115,7 @@ function rootReducer (state= initialState, action){
                             ...state,
                                 detail: action.payload,
                         };
+
             default:
                 return state;
 

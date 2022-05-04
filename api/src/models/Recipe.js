@@ -14,11 +14,11 @@ Paso a paso
   CREO LA TABLA RECIPE y miro los tipos de dato que voy a recibir en https://api.spoonacular.com/recipes/complexSearch?apiKey=95334c489e1f4dcdbc4d95446df4d673*/
   sequelize.define('recipe', {
     id:{
-      type: DataTypes.UUID, //especifico el ID para que no sea incremental por default,
-                            //UUID genera un numero random para que no se pise de mi api a la otra
+      type: DataTypes.UUID, 
+                            
       defaultValue: DataTypes.UUIDV4,
-      allowNull: false, // no se permite que este vacio
-      primaryKey: true,  //va a ser la clave primaria el ID
+      allowNull: false, 
+      primaryKey: true,  
     },
  
     title: { //resumen del plato
@@ -41,8 +41,7 @@ Paso a paso
     image: {
       type: DataTypes.STRING,
     },
-    // le paso la ultima propiedad, para poder acceder a las recetas que creo en esta propiedad,
-    //todas las q yo cree se van a hacer con esta propiedad
+
     createdDb: {
       type: DataTypes.BOOLEAN,
       defaultValue: true,

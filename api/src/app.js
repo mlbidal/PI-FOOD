@@ -22,10 +22,10 @@ server.use((req, res, next) => {
   next();
 }); //aca configuramos corrs
 
-server.use('/', routes); // aca le decimos que en la / va a utilizar lo q venga desde routes
+server.use('/', routes); 
 
 // Error catching endware.
-server.use((err, req, res, next) => { // esto sirve para capturar errores
+server.use((err, req, res, next) => { 
   const status = err.status || 500;
   const message = err.message || err;
   console.error(err);

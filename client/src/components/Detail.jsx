@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getDetail } from "../actions";
 import { Link } from "react-router-dom";
+import "../styles/Detail.css";
 
 
 export default function Detail(props) {
@@ -19,14 +20,16 @@ export default function Detail(props) {
 
   return (
     <div className="container">
-    <div className="detail">
-      <Link to="/home">
+       <Link to="/home">
         <button>Back to Home</button>
       </Link>
+    <div className="detail">
+   
       {detail.length ? (
         <div>
           <h1>Name: "{detail[0].title}"</h1>
           <img
+          onError={(e)=>e.target.setAttribute('src','https://png.pngtree.com/png-vector/20190925/ourlarge/pngtree-kitchen-cutlery-icon-png-image_1745530.jpg')}
             src={
               detail[0].image ? (
                 detail[0].image
@@ -34,6 +37,7 @@ export default function Detail(props) {
                 <img
                   src="https://previews.123rf.com/images/mackoflower/mackoflower1507/mackoflower150700380/42588917-variedad-de-ensaladas-populares-y-saludables-en-la-dieta-alimentos-collage-de-im%C3%A1genes.jpg"
                   alt="img plate"
+                  onError={(e)=>e.target.setAttribute('src','https://w7.pngwing.com/pngs/438/842/png-transparent-fast-food-mexican-cuisine-vegetarian-cuisine-hamburger-lucky-symbols-miscellaneous-food-text.png')}
                 />
               )
             }
