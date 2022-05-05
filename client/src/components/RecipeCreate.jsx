@@ -214,10 +214,11 @@ export default function RecipeCreate() {
           <button type="submit" className="btnCreate">
             Create Recipe
           </button> 
-        </form>
-        <Link to="/home">
+          <Link to="/home">
         <button className="buttonToHome">Back to Home</button>
         </Link>
+        </form>
+        
       </div>
     
   );

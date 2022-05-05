@@ -23,6 +23,7 @@ export default function SearchBar() {
 
   return (
     <span className="searchBar">
+      <div>
       <input
         className="input"
         type="text"
@@ -33,6 +34,7 @@ export default function SearchBar() {
       <button type="submit" onClick={(e) => handleSubmit(e)} className="myButton">
         <span>search</span>
       </button>
+      </div>
     </span>
   );
 }

@@ -1,6 +1,6 @@
 .home {
     background-size: cover;
-    background-color: rgb(236, 218, 218);
+    background-image: url('../ryan-christodoulou-68CDDj03rks-unsplash.jpeg');
     background-repeat: repeat;
     margin: 0;
     width: 100%;
@@ -24,8 +24,8 @@
 .linkCreate{
     margin-right: 10px;
   }
-  .select{
-    font-size: 14px;
+.select{
+    font-size: 15px;
     font-family: 'Helvetica';
     word-spacing: -1px;
     display: flex;
@@ -34,17 +34,24 @@
     align-items: center;
     margin-bottom: 10px;
   }
- 
+ .selectOption{
+   
+   border-radius: 6px;
+   margin-left: 6px;
+   width: 90px;
+   height: 30px;
+   border: 1px solid #686666;
+ }
   .span{
     margin: 3px;
   }
   
 .btnCreate {
     box-shadow:inset 0px 1px 0px 0px #f5978e;
-    background:linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
-    background-color:#f24537;
+    background:linear-gradient(to bottom, #db8a5b 5%, #ca9b7c 100%);
+    background-color:#aa856cd0;
     border-radius:6px;
-    border:1px solid #cc281d;
+    border:1px solid #aa856cd0;
     cursor:pointer;
     color:#ffffff;
     font-family:Arial;
@@ -52,13 +59,13 @@
     font-weight:bold;
     padding:6px 24px;
     text-decoration:none;
-    text-shadow:0px 1px 0px #810e05;
+    text-shadow:0px 1px 0px #8a6646;
     width: 190px;
     
   }
   .btnCreate:hover {
-    background:linear-gradient(to bottom, #c62d1f 5%, #f24537 100%);
-    background-color:#c62d1f;
+    background:linear-gradient(to bottom, #dd915e 5%, #dba788 100%);
+    background-color:#ecb088;
   }
   .btnCreate:active {
     top:1px;
@@ -67,10 +74,10 @@
   
 .showAll{
       box-shadow:inset 0px 1px 0px 0px #f5978e;
-      background:linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
-      background-color:#f24537;
+      background:linear-gradient(to bottom,  #db8a5b 5%, #ca9b7c 100%);
+      background-color:#aa856cd0;
       border-radius:6px;
-      border:1px solid #cc281d;
+      border:1px solid #aa856cd0;
       display:flex;
       cursor:pointer;
       color:#ffffff;
@@ -79,32 +86,23 @@
       font-weight:bold;
       padding:6px 24px;
       text-decoration:none;
-      text-shadow:0px 1px 0px #810e05;
+      text-shadow:0px 1px 0px #8a6646;
     }
 .showAll:hover {
-      background:linear-gradient(to bottom, #c62d1f 5%, #f24537 100%);
-      background-color:#c62d1f;
+      background:linear-gradient(to bottom, #dd915e 5%, #dba788 100%);
+      background-color:#ecb088;
     }
-    .showAll:active {
+.showAll:active {
       top:1px;
     }
 
-  .paginate {
+.paginate {
       margin-bottom: 10px;
+      margin-right: 10px;
       
       
     }
-    .paginate button {
-      background-color: rgba(105, 105, 105, 0.726);
-      border-color: white;
-      color: white;
-      
-    }
-    .paginate button:hover {
-      background-color: rgb(240, 238, 238);
-      color: rgb(27, 27, 27);
-  
-    }
+
   .cardsContainer{
     width: 100%;
     display: flex;

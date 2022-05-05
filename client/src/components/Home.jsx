@@ -81,15 +81,15 @@ export default function Home() {
       <div className="select">
         <div className= 'barra'>
         <span className="span">Order by Name</span>
-        <select onChange={(n) => handleSelectByName(n)}>
+        <select className= 'selectOption' onChange={(n) => handleSelectByName(n)}>
           <option value="default">All</option>
           <option value="A-Z">A-Z</option>
           <option value="Z-A">Z-A</option>
         </select>
         </div>
         <div className= 'barra'>
-        <span className="span">by Score</span>
-        <select onChange={(s) => handleSelectByScore(s)}>
+        <span className="span">By Score</span>
+        <select className= 'selectOption' onChange={(s) => handleSelectByScore(s)}>
           <option value="All">All</option>
           <option value="Asc">Highest Score</option>
           <option value="Desc">Lowest Score</option>
@@ -97,7 +97,7 @@ export default function Home() {
         </div>
         <div className= 'barra'>
         <span className="span">Filter by Type of diet</span>
-        <select onChange={(e) => handleSelectTypeOfDiet(e)}>
+        <select className= 'selectOption' onChange={(e) => handleSelectTypeOfDiet(e)}>
           <option value="default">All Diets</option>
           {diets.map((d) => (
             <option value={d.name} key={d.id}>

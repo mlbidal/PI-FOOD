@@ -9,7 +9,7 @@ export const GET_NAME_RECIPE = "GET_NAME_RECIPE";
 export const GET_DIETS = "GET_DIETS"; 
 export const POST_RECIPE = "POST_RECIPE";
 export const GET_DETAIL = "GET_DETAIL";
-
+export const CLEAN_RECIPE = "CLEAN_RECIPE";
 
 
 
