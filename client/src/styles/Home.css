@@ -34,8 +34,7 @@
     align-items: center;
     margin-bottom: 10px;
   }
- .selectOption{
-   
+.selectOption{
    border-radius: 6px;
    margin-left: 6px;
    width: 90px;
@@ -67,9 +66,9 @@
     background:linear-gradient(to bottom, #dd915e 5%, #dba788 100%);
     background-color:#ecb088;
   }
-  .btnCreate:active {
+.btnCreate:active {
     top:1px;
-  }
+}
   
   
 .showAll{
@@ -94,33 +93,30 @@
     }
 .showAll:active {
       top:1px;
-    }
+}
 
 .paginate {
-      margin-bottom: 10px;
-      margin-right: 10px;
-      
-      
-    }
+      margin-bottom: 10px; 
+}
 
   .cardsContainer{
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  .cards {
-      display:flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      justify-content: center; 
-      width: 80%;
-      align-items: center;
-      margin-bottom: 30px;
-    }
+}
+.cards {
+  display:flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center; 
+  width: 80%;
+  align-items: center;
+  margin-bottom: 30px;
+}
     
-    .linkCard {
-      text-decoration: none;
-    }
+.linkCard {
+  text-decoration: none;
+}
   
     
