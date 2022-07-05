@@ -1,6 +1,6 @@
 <h1 align="center">API FOODS</h1>
 
-<h3 align="center"> Objetivos del Proyecto</h3>
+<h3 align="center"> Objetivos del Proyecto:</h3>
 
 - Construir una App utlizando React, Redux, Node y Sequelize.
 - Afirmar y conectar los conceptos aprendidos en la carrera.
@@ -9,7 +9,7 @@
 - Usar y practicar testing.
 
 
- <h4 align="center"> Que se quiere lograr con el proyecto! </h4>
+ <h3 align="center"> Que se quiere lograr con el proyecto: </h3>
  
 La idea general es crear una aplicación en la cual se puedan ver distintas recetas de comida junto con información relevante de las mismas utilizando la api externa [spoonacular](https://spoonacular.com/food-api) y a partir de ella poder, entre otras cosas:
 
@@ -17,7 +17,7 @@ La idea general es crear una aplicación en la cual se puedan ver distintas rece
   - Filtrarlos / Ordenarlos
   - Crear nuevas recetas propias
 
-  <h4 align="center">Tecnologías necesarias:</h4>
+  <h3 align="center">Tecnologías necesarias:</h3>
 - [ ] React
 - [ ] Redux
 - [ ] Express
