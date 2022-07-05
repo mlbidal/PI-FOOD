@@ -1,6 +1,6 @@
-API FOODS
+<h1 align="center">API FOODS</h1>
 
-## Objetivos del Proyecto
+<h3 align="center"> Objetivos del Proyecto</h3>
 
 - Construir una App utlizando React, Redux, Node y Sequelize.
 - Afirmar y conectar los conceptos aprendidos en la carrera.
@@ -9,7 +9,7 @@ API FOODS
 - Usar y practicar testing.
 
 
- ## Que se quiere lograr con el proyecto!
+ <h4 align="center"> Que se quiere lograr con el proyecto! </h4>
  
 La idea general es crear una aplicación en la cual se puedan ver distintas recetas de comida junto con información relevante de las mismas utilizando la api externa [spoonacular](https://spoonacular.com/food-api) y a partir de ella poder, entre otras cosas:
 
@@ -17,14 +17,14 @@ La idea general es crear una aplicación en la cual se puedan ver distintas rece
   - Filtrarlos / Ordenarlos
   - Crear nuevas recetas propias
 
-#### Tecnologías necesarias:
+  <h4 align="center">Tecnologías necesarias:</h4>
 - [ ] React
 - [ ] Redux
 - [ ] Express
 - [ ] Sequelize - Postgres
 - [ ] CSS Puro
 
-#### Frontend
+<h3  align="left">Frontend</h3>
 
 CARACTERISTICAS:
 
@@ -80,9 +80,9 @@ __Componentes de Not Found:
 
 <!-- ![notfoundpage](https://user-images.githubusercontent.com/82724532/177238001-56b68fb0-11ad-4407-bf33-9888686a4ba5.jpg) -->
 
-#### Base de datos
+<h3  align="left">Base de datos</h3>
 
-#### Tecnologías necesarias:
+TECNOLOGÍAS NECESARIAS:
 
 - [ ] PostgreSQL
 
@@ -101,9 +101,10 @@ El modelo de la base de datos tiene las siguientes entidades:
   - ID
   - Nombre
 
-#### Backend
+<h3  align="left">Backend</h3>
 
-#### Tecnologías necesarias:
+TECNOLOGÍAS NECESARIAS:
+
 - [ ] Node JS
 - [ ] Express
 - [ ] Sequelize
